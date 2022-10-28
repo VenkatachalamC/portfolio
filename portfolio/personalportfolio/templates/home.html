@@ -1,0 +1,70 @@
+
+{%load static %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Venkatachalam C</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="{% static 'style.css' %}">
+    </head>
+    <body>
+        <div class="navbar">
+           <!-- <h1 class="name">Venkatachalam C</h1> -->
+
+            <a href="#about">
+            <h3 class="navcom">About</h3></a>
+            <a href="#certificates"><h3 class="navcom">Certificates</h3></a>
+            
+            <a href="{% static 'Venkatachalam\'s Resume.pdf' %}" target=_blank>
+            <h3 class="navcom">Resume</h3></a>
+
+        </div>
+        <img  id="pho" src="" style="width:250px;height:250px;opacity:0;" class="radius main">
+
+        <div>
+        <h1 id="about">
+        About Me
+        </h1>
+        <p> 
+        <h3>Hey there this is <b>Venkatachalam C<b>.Im a coder.I love to work at both front end and back end development<br>Im pursuining my B.TECH Degree in Computer Science at <b>SASTRA DEEMED UNIVERSITY</b><br>
+        </h3>       
+        </p>
+        <h2 style="color:white;margin-left:20px">Projects</h2>
+        {% for p in obj %}
+        <div class="project">
+            <a href="{{ p.link }}" target=_blank><img src="{{ p.image.url }}"  class="cover"></a>
+            <h3 class="content">{{ p.name }}</h3>
+        </div>
+        {% endfor %}
+        <h2 style="color:white;margin-left:20px" id="certificates">Certificates</h2>
+        {% for c in cer %}
+        <div class="project">
+            <img src="{{ c.certi.url }}" class="cover">
+            <h3 class="content">{{ c.name }}</h3>
+            
+        </div>
+        {% endfor %}
+        <div class="contacts">
+        {% for cont in con %}
+        <a href="{{ cont.link }}" target=_blank>
+        <img src="{{ cont.icon.url }}" class="logo"></a>
+        {% endfor %}
+        </div>
+        <script src="{% static 'jquery-3.6.1.min.js'%}"></script>
+        <script>
+        $(document).ready(()=>{
+            $("#pho").attr("src","{% static 'photo0.jpg' %}").animate({opacity:"1"},4000)
+            $(".project").animate({opacity:"1"},4000)
+            return true
+        })
+
+        </script>
+
+    </body>
+    
+
+
+</html>

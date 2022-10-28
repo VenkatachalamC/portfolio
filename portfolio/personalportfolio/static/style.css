@@ -1,0 +1,154 @@
+body{
+    background-image: url("backgroundimg.webp");
+    background-size: 2000px 1000px;
+}
+
+img.main{
+    display: inline;
+    margin-left: 650px;
+    margin-right: 400px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.logo{
+margin-left: 50px;
+margin-right: 50px;
+margin-top: 10px;
+height:50px;
+width: 50px;
+
+}
+.radius{
+    border-radius: 50%;
+}
+
+.leetlog{
+    margin-left: 50px;
+    margin-right: 50px;
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+    margin-top: 10px;
+
+
+}
+#about{
+    text-align: center;
+    color: #ffcc66;
+}
+
+h3{
+    text-align: center;
+    color: #ffb380;
+}
+
+.contacts{
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.navbar{
+    display: block;
+    width: 100%;
+    text-align: right;
+
+}
+
+
+.navcom{
+    display:inline-block;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.name{
+    color: #1f8e8b;
+    font-family: cursive;
+    margin-right: 600px;
+    margin-left: 600px;
+    display:inline;
+}
+
+.project{
+    display: block;
+    border-radius:10%;
+    height:200px;
+    opacity: 0;
+    margin-top: 50px;
+}
+
+.cover{
+
+    margin-left:10px;
+    
+    height: 200px;
+    width:300px;
+    border-radius:5%;
+    float:left;
+}
+
+
+.content{
+    font-style: oblique;
+    margin-left: 30px;
+    color:aqua;
+    display: inline-block;
+    width:50;
+
+}
+
+.link{
+    font-style: oblique;
+    margin-left: 10px;
+    color:aquamarine;
+    display:block;
+}
+
+
+
+@media only screen and (max-width: 650px) {
+
+    img.main{
+        display:block;
+        margin-left: 60px;
+    }
+    .project{
+        margin-top: 20px;
+        margin-bottom: 20px;
+        height: auto;
+        text-align: center;
+    }
+    .cover{
+        float: none;
+    }
+
+    .content{
+        margin-left: 10px;
+        display: block;
+    }
+    .link{
+        display: block;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+    .content{
+        display: block;
+        margin-top: 10px;
+        margin-bottom: 10px;
+
+    }
+    .contacts{
+        height: 10px;
+        display: block;
+        margin-left: 30px;
+        margin-right: 30px;
+    }
+    .logo{
+        height: 30px;
+        width: 30px;
+        margin-left: 20px;
+        margin-right: 10px;
+    }
+  }
